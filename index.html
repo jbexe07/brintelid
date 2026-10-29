@@ -16,9 +16,8 @@
       name="description"
       content="Brintel iD: ponto eletrônico por reconhecimento facial, 100% em nuvem e homologado pela Portaria nº 671 do MTE. Do registro ao fechamento das horas, com treinamento e suporte. Pará de Minas - MG."
     />
-    <link rel="preload" href="/brintelid/img/idface-pro.webp" as="image" type="image/webp" fetchpriority="high" />
-    <script type="module" crossorigin src="/brintelid/assets/index-csEX4lHd.js"></script>
-    <link rel="stylesheet" crossorigin href="/brintelid/assets/index-C7Br6qQA.css">
+    <script type="module" crossorigin src="/brintelid/assets/index-BkH9JzL_.js"></script>
+    <link rel="stylesheet" crossorigin href="/brintelid/assets/index-DZE9hvEh.css">
   </head>
   <body class="page-id">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -77,31 +76,38 @@
           </div>
         </div>
 
-        <figure class="id-device">
-          <div class="id-device__stage">
-            <svg class="id-device__rings" viewBox="0 0 400 400" aria-hidden="true">
-              <circle cx="200" cy="200" r="190" />
-              <circle cx="200" cy="200" r="150" />
-            </svg>
-            <span class="id-device__halo" aria-hidden="true"></span>
-            <!-- imagem + efeitos num só bloco: inclinam juntos com o mouse -->
-            <div class="id-device__body">
-              <img
-                class="id-device__img"
-                src="/brintelid/img/idface-pro.webp"
-                alt="Coletor de ponto Control iD ID Face Pro, com tela de reconhecimento facial"
-                width="630"
-                height="630"
-                fetchpriority="high"
-              />
-              <span class="id-device__sheen" aria-hidden="true"><i></i></span>
-              <span class="id-device__scan" aria-hidden="true"><i></i></span>
+        <!-- o sistema na abertura: painel montado em src/system-screens.js (dados fictícios) -->
+        <figure class="hero-sys">
+          <div class="hero-sys__stage">
+            <span class="hero-sys__halo" aria-hidden="true"></span>
+            <!-- janela + reflexo num só bloco: inclinam juntos com o mouse -->
+            <div class="hero-sys__body" aria-hidden="true">
+              <div class="sys">
+                <div class="sys__chrome">
+                  <span class="sys__dots"><i></i><i></i><i></i></span>
+                  <span class="sys__address">Brintel iD · sistema de ponto em nuvem</span>
+                </div>
+                <div class="sys__app">
+                  <div class="sys__side"></div>
+                  <div class="sys__main">
+                    <div class="sys__top"></div>
+                    <div class="sys__screen"></div>
+                  </div>
+                </div>
+              </div>
+              <span class="hero-sys__sheen"><i></i></span>
+            </div>
+            <!-- notificação de marcação: nome e hora trocam a cada ciclo -->
+            <div class="hero-sys__toast" aria-hidden="true">
+              <svg class="hero-sys__check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" /><path d="M7 12.5l3.2 3.2L17 9" /></svg>
+              <span><b>Ponto registrado</b><span data-who>Pedro Henrique Lima</span></span>
+              <time data-when>09:11</time>
             </div>
             <span class="lp-chip lp-chip--a" aria-hidden="true">Reconhecimento facial</span>
             <span class="lp-chip lp-chip--b" aria-hidden="true">100% em nuvem</span>
             <span class="lp-chip lp-chip--c" aria-hidden="true">Portaria 671</span>
           </div>
-          <figcaption class="sr-only">Control iD ID Face Pro, coletor de marcações por reconhecimento facial</figcaption>
+          <figcaption class="sr-only">Painel do sistema de ponto Brintel iD, com horas da semana e últimas marcações (dados fictícios)</figcaption>
         </figure>
 
         <a class="lp-hero__cue" href="#lei"><span class="sr-only">Rolar para a próxima seção</span><i aria-hidden="true"></i></a>
@@ -253,13 +259,12 @@
               <span class="sys__address">Brintel iD · sistema de ponto em nuvem</span>
             </div>
             <div class="sys__app">
-              <div class="sys__rail" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="sys__side" aria-hidden="true"></div>
               <div class="sys__main">
-                <div class="sys__top" aria-hidden="true"><span></span><span></span><b>BRINTEL</b></div>
+                <div class="sys__top" aria-hidden="true"></div>
                 <div class="sys__screen" id="tela-painel" role="tabpanel" aria-labelledby="tab-painel"></div>
                 <div class="sys__screen" id="tela-funcionarios" role="tabpanel" aria-labelledby="tab-funcionarios" hidden></div>
                 <div class="sys__screen" id="tela-apuracao" role="tabpanel" aria-labelledby="tab-apuracao" hidden></div>
-                <p class="sys__foot" aria-hidden="true">© Control iD · Cliente: Empresa Exemplo</p>
               </div>
             </div>
           </div>
@@ -357,14 +362,26 @@
         </div>
 
         <div class="lp-spec__stage">
-          <img
-            class="lp-spec__device"
-            src="/brintelid/img/idface-pro.webp"
-            alt="Control iD ID Face Pro"
-            width="630"
-            height="630"
-            loading="lazy"
-          />
+          <!-- aparelho com anéis, brilho, reflexo no vidro e varredura do rosto; inclina com o mouse -->
+          <figure class="lp-spec__device id-device">
+            <svg class="id-device__rings" viewBox="0 0 400 400" aria-hidden="true">
+              <circle cx="200" cy="200" r="190" />
+              <circle cx="200" cy="200" r="150" />
+            </svg>
+            <span class="id-device__halo" aria-hidden="true"></span>
+            <div class="id-device__body">
+              <img
+                class="id-device__img"
+                src="/brintelid/img/idface-pro.webp"
+                alt="Coletor de ponto Control iD ID Face Pro, com tela de reconhecimento facial"
+                width="630"
+                height="630"
+                loading="lazy"
+              />
+              <span class="id-device__sheen" aria-hidden="true"><i></i></span>
+              <span class="id-device__scan" aria-hidden="true"><i></i></span>
+            </div>
+          </figure>
           <svg class="lp-spec__lines" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
             <path d="M440 150H330l-30-40H0" />
             <path d="M430 300H0" />
@@ -399,6 +416,14 @@
               <dd>Compatível com o registro de ponto da Portaria MTP 671/2021</dd>
             </div>
           </dl>
+        </div>
+
+        <!-- compra avulsa do aparelho. PENDENTE: link de afiliado do Mercado Livre -->
+        <div class="lp-spec__buy">
+          <p>Quer só o aparelho? Ele também é vendido separadamente.</p>
+          <a class="btn btn--ml pending" href="#link-mercado-livre-pendente" target="_blank" rel="sponsored noopener"
+            >Comprar no Mercado Livre<span class="sr-only"> (abre em nova aba)</span></a
+          >
         </div>
       </section>
 
